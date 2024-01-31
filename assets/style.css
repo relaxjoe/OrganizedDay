@@ -68,7 +68,6 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-/* Responsive Design Adjustments */
 @media (max-width: 768px) {
   .hour, .description, .saveBtn {
     padding: 5px;
@@ -82,3 +81,4 @@ textarea {
     font-size: 14px;
   }
 }
+

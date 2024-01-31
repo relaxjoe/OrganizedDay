@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // Function to update the current day at the top of the calendar
+    // Function to update the current day
   function updateCurrentDay() {
       $('#currentDay').text(dayjs().format('dddd, MMMM D, YYYY'));
   }
@@ -29,14 +29,14 @@ $(document).ready(function() {
   updateTimeBlockColors();
   setInterval(updateTimeBlockColors, 60000);
 
-  // Save button event listener
+  // Save button Listener
   $('.saveBtn').on('click', function() {
       var hourId = $(this).parent().attr('id');
       var eventText = $(this).siblings('.description').val();
       localStorage.setItem(hourId, eventText);
   });
 
-  // Load saved events from local storage
+  // Load from local storage
   $('.time-block').each(function() {
       var hourId = $(this).attr('id');
       var savedEvent = localStorage.getItem(hourId);
